@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.30/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.30",
+  "version": "1.0.0",
+  "id": "${{TEAMS_APP_ID}}",
+  "developer": {
+    "name": "Skysecure Technologies",
+     "websiteUrl": "https://skysecure.ai",
+    "privacyUrl": "https://skysecure.ai/privacy-policy",
+    "termsOfUseUrl": "https://skysecure.ai/terms-of-service"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "Invoice Generator${{APP_NAME_SUFFIX}}",
+    "full": "Invoice Generator"
+  },
+  "description": {
+    "short": "Create test invoices as PDFs.",
+    "full": "Create and review invoices for testing, UAT, training, and demonstration use."
+  },
+  "accentColor": "#FFFFFF",
+  "supportsChannelFeatures": "tier1",
+  "bots": [
+    {
+      "botId": "${{BOT_ID}}",
+      "scopes": [
+        "team",
+        "groupChat",
+        "personal",
+        "copilot"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "supportsTargetedMessages": false,
+      "commandLists": [
+        {
+          "scopes": [
+            "personal",
+            "copilot"
+          ],
+          "triggers": [
+            "mention"
+          ],
+          "commands": [
+            {
+              "title": "Generate Invoices",
+              "description": "Create an invoice PDF"
+            },
+            {
+              "title": "Help",
+              "description": "Learn what Invoice Generator can do"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copilotAgents": {
+    "customEngineAgents": [
+      {
+        "type": "bot",
+        "id": "${{BOT_ID}}"
+      }
+    ]
+  },
+  "composeExtensions": [],
+  "configurableTabs": [],
+  "staticTabs": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": []
+}
