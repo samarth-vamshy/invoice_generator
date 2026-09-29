@@ -1,0 +1,33 @@
+# TeamsFx files
+env/.env.*.user
+env/.env.local
+env/.env.playground
+.env
+appPackage/build
+
+# python virtual environment
+.venv/
+__pycache__/
+
+# others
+.deployment/
+node_modules/
+devTools/*.log
+
+# Dev tool directories
+/devTools/
+
+# Local Toolkit state and generated invoices
+/.localConfigs
+/generated/
+
+# Python caches and test reports
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime logs
+*.log

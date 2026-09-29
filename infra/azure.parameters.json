@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourceBaseName": {
+      "value": "bot${{RESOURCE_SUFFIX}}"
+    },
+    "azureOpenaiKey": {
+      "value": "${{SECRET_AZURE_OPENAI_API_KEY}}"
+    },
+    "azureOpenaiModelDeploymentName": {
+      "value": "${{AZURE_OPENAI_DEPLOYMENT_NAME}}"
+    },
+    "azureOpenaiEndpoint": {
+      "value": "${{AZURE_OPENAI_ENDPOINT}}"
+    },
+    "webAppSKU": {
+      "value": "B3"
+    },
+    "botDisplayName": {
+      "value": "Invoice_generator_Azure"
+    },
+    "linuxFxVersion": {
+      "value": "PYTHON|3.12"
+    },
+    "sharepointSiteId": {
+      "value": "${{SHAREPOINT_SITE_ID}}"
+    },
+    "sharepointLibraryId": {
+      "value": "${{SHAREPOINT_LIBRARY_ID}}"
+    },
+    "sharepointLibraryName": {
+      "value": "${{SHAREPOINT_LIBRARY_NAME}}"
+    },
+    "sharepointGraphTenantId": {
+      "value": "${{SHAREPOINT_GRAPH_TENANT_ID}}"
+    },
+    "sharepointGraphClientId": {
+      "value": "${{SHAREPOINT_GRAPH_CLIENT_ID}}"
+    },
+    "sharepointGraphClientSecret": {
+      "value": "${{SECRET_SHAREPOINT_GRAPH_CLIENT_SECRET}}"
+    }
+  }
+}
